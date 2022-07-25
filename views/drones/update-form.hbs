@@ -2,17 +2,17 @@
    <div class="col-md-4 offset-md-4">
       <h2>Update the drone</h2>
 
-      <form action="/drones/create" method="post" class="card card-body text-white" style="background-color: #202020;">
+      <form action="/drones/{{droneById._id}}/edit" method="post" class="card card-body text-white" style="background-color: #202020;">
          <label for="name">Name</label>
-         <input type="text" name="name" value="{{droneById.name}}" placeholder="Drone's brand" class="form-control mb-2" required>
+         <input type="text" name="name" value="{{droneById.name}}" placeholder="Drone's brand" class="form-control mb-2">
          <br>
          <label for="propellers">Propellers</label>
-         <input type="text" name="propellers" value="{{droneById.propellers}}" placeholder="propellers number" class="form-control mb-2" required>
+         <input type="text" name="propellers" value="{{droneById.propellers}}" placeholder="propellers number" class="form-control mb-2">
          <br>
-         <label for="speed">Speed</label>
-         <input type="text" name="speed" value="{{droneById.maxSpeed}}" placeholder="speed number" class="form-control mb-2" required>
+         <label for="maxSpeed">Speed</label>
+         <input type="text" name="maxSpeed" value="{{droneById.maxSpeed}}" placeholder="speed number" class="form-control mb-2">
 
-         <button class="btn btn-primary">Actualizar Drone</button>
+         <button class="btn btn-primary">Update Drone</button>
 
       </form>
 </div>

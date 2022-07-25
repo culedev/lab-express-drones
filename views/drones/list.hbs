@@ -1,17 +1,21 @@
-
 {{!-- {{dronesList}} --}}
+<div class="list">
+  {{#each dronesList}}
+    <div class="each-drone">      
+      <ul><h3> {{this.name}} </h3>
+        <li>Propellers: {{this.propellers}}</li>
+        <li>Speed: {{this.maxSpeed}}</li>
+        <a class="btn btn-info" href="/drones/{{this._id}}/edit"><i
+            class="fas fa-edit"
+          ></i>
+          Edit Drone</a>
 
-{{#each dronesList}}
-   <h2>Available drones</h2>
-   <ul><h3> {{this.name}} </h3>
-   <li>Propellers: {{this.propellers}}</li>
-   <li>Speed: {{this.maxSpeed}}</li>
-   <a class="btn btn-info" href="/drones/{{this._id}}/edit"><i class="fas fa-edit"></i> Edit Drone</a>
+        <form action="/drones/{{this._id}}/delete" method="POST">
+          <button class="btn btn-danger"><i class="fas fa-trash-alt"></i>
+            Delete Drone</button>
+        </form>
 
-   <form action="/drones/{{this._id}}/delete" method="POST">
-      <button class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete Drone</button>
-   </form>
-
-</ul>
-{{/each}}
-
+      </ul>
+    </div>
+  {{/each}}
+</div>
