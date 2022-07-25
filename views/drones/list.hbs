@@ -2,10 +2,15 @@
 
 {{!-- {{dronesList}} --}}
 {{#each dronesList}}
-
    <ul><h3> {{this.name}} </h3>
    <li>Propellers: {{this.propellers}}</li>
    <li>Speed: {{this.maxSpeed}}</li>
+   <a href="/drones/{{this._id}}/edit"><button>Edit Drone</button></a>
+
+   <form action="/drones/{{this._id}}/delete" method="POST">
+      <button>Delete Drone</button>
+   </form>
+
 </ul>
 {{/each}}
 
