@@ -1,16 +1,19 @@
-<h2>Create a new drone</h2>
 
+<div class="container">
+   <div class="col-md-4 offset-md-4">
+      <h2>Create a new drone</h2>
 
-<form action="/drones/create" method="post">
-   <label for="name">Name</label>
-   <input type="text" name="name">
-   <br>
-   <label for="propellers">Propellers</label>
-   <input type="text" name="propellers">
-   <br>
-   <label for="speed">Speed</label>
-   <input type="text" name="speed">
+      <form action="/drones/create" method="post" class="card card-body text-white" style="background-color: #202020;">
+         <label for="name">Name</label>
+         <input type="text" name="name" placeholder="Drone's brand" class="form-control mb-2" required>
+         <br>
+         <label for="propellers">Propellers</label>
+         <input type="text" name="propellers" placeholder="propellers number" class="form-control mb-2" required>
+         <br>
+         <label for="speed">Speed</label>
+         <input type="text" name="speed" placeholder="speed number" class="form-control mb-2" required>
 
-   <button>Añadir Drone</button>
+         <button class="btn btn-primary">Añadir Drone</button>
 
-</form>
+      </form>
+</div>

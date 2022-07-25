@@ -26,7 +26,7 @@ router.post("/create", async (req, res, next) => {
   const { name, propellers, maxSpeed } = req.body;
   try {
     await Drone.create({ name, propellers, maxSpeed });
-    res.redirect("/");
+    res.redirect("/drones");
   } catch (error) {
     next(error);
   }
